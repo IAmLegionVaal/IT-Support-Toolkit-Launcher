@@ -1,3 +1,5 @@
+> **Publication update — 17 November 2026:** All five standalone public repositories are published and their GitHub Actions checks passed. See the [verified repository index and CI evidence](INCIDENT-REPOSITORIES.md). Earlier “not created/prepared” statements below are historical records superseded by that report. CI success does not change incident outcomes.
+
 # Recent real-world incident case studies (November 2026)
 
 These cases were anonymized before publication. No customer names, tenant identifiers, IP addresses, original credentials, VPN private keys, certificate packages or connection strings were included.
