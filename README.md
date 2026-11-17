@@ -45,3 +45,11 @@ windows
 troubleshooting
 portfolio
 ```
+
+## Real-world support incidents and portfolio audit (November 2026)
+
+- [Incident case-study index](RECENT-INCIDENT-CASE-STUDIES.md) — four field cases committed into their existing toolkits, each with an accompanying diagnostic script.
+- [Five staged standalone projects](incident-projects/README.md) — macOS client certificate authentication, DirectAdmin Moodle cron, Bionic Gemini MCP, WordPress LiteSpeed 503, and Microsoft 365 AI connector security review. Separate repositories are **not created yet**; this folder makes the published material browsable.
+- [Structural audit of 100 public repositories](PORTFOLIO-AUDIT-2026-11-17.md) — tests, CI, root licences and prioritized remediation backlog.
+
+**Safety:** Cases are anonymized; no production credentials, private keys, raw customer logs, tenant IDs or private URLs. All diagnostic scripts require review; syntax/CI success is not equivalent to end-to-end incident resolution.
