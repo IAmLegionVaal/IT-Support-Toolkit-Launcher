@@ -1,0 +1,41 @@
+name: Staged incident project static checks
+on:
+  push:
+    paths:
+      - 'incident-projects/**'
+      - '.github/workflows/incident-projects-static.yml'
+  pull_request:
+    paths:
+      - 'incident-projects/**'
+      - '.github/workflows/incident-projects-static.yml'
+permissions:
+  contents: read
+jobs:
+  bash-syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Shell syntax and file sanity (no execution)
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r -d '' f; do bash -n "$f"; done < <(find incident-projects -type f -name '*.sh' -print0)
+          test -s incident-projects/README.md
+          test -s incident-projects/SECURITY.md
+  powershell-syntax:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: PowerShell parser only (no execution)
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          foreach ($file in Get-ChildItem -Path incident-projects -Recurse -Filter '*.ps1') {
+            $tokens = $null
+            $parseErrors = $null
+            [void][System.Management.Automation.Language.Parser]::ParseFile($file.FullName, [ref]$tokens, [ref]$parseErrors)
+            if ($parseErrors.Count -gt 0) {
+              foreach ($err in $parseErrors) { Write-Error "$($file.FullName): $($err.Message)" }
+              throw 'PowerShell syntax validation failed.'
+            }
+          }
