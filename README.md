@@ -1,3 +1,5 @@
+> **Publication update — 17 November 2026:** All five standalone public repositories are published and their GitHub Actions checks passed. See the [verified repository index and CI evidence](INCIDENT-REPOSITORIES.md). Earlier “not created/prepared” statements below are historical records superseded by that report. CI success does not change incident outcomes.
+
 # IT Support Toolkit Launcher
 
 A PowerShell launcher and portfolio hub for Dewald Pretorius / Dtech IT Solutions support toolkits.
