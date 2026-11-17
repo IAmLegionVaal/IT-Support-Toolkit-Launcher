@@ -1,3 +1,5 @@
+> **Publication update — 17 November 2026:** All five standalone public repositories are published and their GitHub Actions checks passed. See the [verified repository index and CI evidence](../INCIDENT-REPOSITORIES.md). Earlier “not created/prepared” statements below are historical records superseded by that report. CI success does not change incident outcomes.
+
 # Real-world IT incident projects — November 2026
 
 This is a **staging collection** inside the existing IT-Support-Toolkit-Launcher repository. These are **not** separate GitHub repositories yet: the connected GitHub integration can update existing repositories but cannot create repositories.
